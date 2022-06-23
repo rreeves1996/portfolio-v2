@@ -1,24 +1,13 @@
 const portfolioButton = document.getElementById("portfolio-shortcut");
 const sideButton = document.querySelectorAll(".sidebutton");
-console.log(portfolio);
+const pages = [
+    home = document.getElementById("home"),
+    about = document.getElementById("about"),
+    portfolio = document.getElementById("portfolio"),
+    contact = document.getElementById("contact")];
 
-portfolioButton.addEventListener("click", function() {
-    document.getElementById("portfolio").scrollIntoView();
-    console.log(":sdasd");
-})
-sideButton[0].addEventListener("click", function() {
-    document.getElementById("home").scrollIntoView();
-    console.log(":sdasd");
-})
-sideButton[1].addEventListener("click", function() {
-    document.getElementById("about").scrollIntoView();
-    console.log(":sdasd");
-})
-sideButton[2].addEventListener("click", function() {
-    document.getElementById("portfolio").scrollIntoView();
-    console.log(":sdasd");
-})
-sideButton[3].addEventListener("click", function() {
-    document.getElementById("contact").scrollIntoView();
-    console.log(":sdasd");
-})
+for (let i = 0; i < pages.length; i++) {
+    sideButton[i].addEventListener("click", function() {
+        pages[i].scrollIntoView();
+    });
+}

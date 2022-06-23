@@ -1,115 +1,13 @@
 :root {
     --white: #fff;
     --off-white-lightest: rgb(241, 240, 238);
-    --off-white-lighter: rgb(173, 192, 190);
-    --off-black-darkest: rgb(18, 18, 20);
+    --off-white-lighter: rgb(182, 173, 192);
+    --off-black-darkest: rgb(35, 35, 59);
 }
-
-
-
-
-h1 {
-    font-size: 400%;
-    margin: 20px;
+::selection {
+    background: rgb(143, 91, 255);
 }
-h3 {
-    font-size: 200%;
-    color: var(--off-white-lighter);
-}
-body {
-    color: var(--white);
-    background-color: var(--off-black-darkest);
-}
-header {
-    position: relative;
-    top: 30%;
-    left: 10%;
-    line-height: 1.5;
-    opacity: 0;
-    -webkit-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
-    -moz-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
-    -o-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
-    animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
-}
-header h1 {
-    filter: none;
-    animation: glow 7s cubic-bezier(.17,.81,0,1.01) forwards 2s;
-}
-header h3 {
-
-    position: relative;
-    left: 25%;
-    opacity: 0%;
-    -webkit-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
-    -moz-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
-    -o-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
-    animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
-}
-section {
-    display: flex;
-    position: relative;
-    height: 120vh;
-} 
-.portfolio-shortcut {
-    color: rgb(119, 119, 119);
-    position: absolute;
-    transform: translate(40px, 100px);
-    background: var(--off-black-darkest);
-    border: 3px solid rgb(119, 119, 119);
-    border-radius: 40px;
-    width: 30px;
-    height: 30px;
-    text-align: right;
-    margin-bottom: auto;
-    line-height: 0.2;
-    font-weight: 700;
-    opacity: 0%;
-    padding: 25px 30px 30px 25px;
-    box-shadow: 0 0 1px rgb(177, 177, 177);
-    animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1.2s forwards;
-    -webkit-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
-    -moz-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
-    -o-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
-    transition: width 0.9s cubic-bezier(.36,.83,0,.99) 0.1s, 
-    padding .4s cubic-bezier(.36,.83,0,.99),
-    transform .4s cubic-bezier(.36,.83,0,.99),
-    border-color 0.5s, 
-    border-radius 0.3s,
-    color 1s;
-}
-.portfolio-shortcut:hover {
-    background-color: rgba(69, 185, 173, 0.071);
-    border: 3px solid rgb(229, 255, 251);
-    box-shadow: 0 0 6px rgba(121, 221, 204, 0.947), inset 0px 0px 10px 5px rgba(67, 216, 211, 0.455);
-    color: var(--white);
-    width: 280px;
-    padding: 31px 30px 35px 31px;
-    transform: translate(36px, 96px);
-    border-radius: 60px;
-    cursor: pointer;
-    transition: width 1.3s cubic-bezier(.36,.83,0,.99), 
-    padding .8s cubic-bezier(.36,.83,0,.99),
-    transform .8s cubic-bezier(.36,.83,0,.99),
-    border-color 0.5s, 
-    box-shadow 0.2s, 
-    border-radius 0.3s,
-    color 1s;
-}
-.portfolio-shortcut:hover::before {
-    content: "Show me the projects!";
-    font-size: 110%;
-    white-space: nowrap;
-    position: fixed;
-    text-align: right;
-    right: 50px;
-    opacity: 0;
-    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
-    -webkit-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
-    -moz-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
-    -o-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
-    animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
-}
-
+/* SIDEBAR */
 .sidebar-gradient {
     position: fixed;
     background: rgb(0,0,0);
@@ -120,7 +18,7 @@ section {
     height: 100vh;
 }
 .sidebar {
-    background-color: rgba(202, 202, 202, 0.511);
+    background-color: rgba(173, 203, 197, 0.511);
     border-left: 4px solid rgba(255, 255, 255, 0.052);
     filter: drop-shadow(0px 10px 20px rgba(79, 186, 200, 0.523));
     position: relative;
@@ -136,7 +34,7 @@ section {
     box-shadow 0.2s cubic-bezier(.34,.3,0,1.02);
 }
 .sidebar:hover {
-    background-color: rgba(160, 237, 218, 0.288);
+    background-color: rgba(128, 234, 207, 0.488);
     filter: drop-shadow(-10px 10px 25px rgba(42, 255, 255, 0.308));
     transition: filter 1.2s cubic-bezier(.34,.3,0,1.02),
     background-color 0.2s cubic-bezier(.34,.3,0,1.02),
@@ -179,6 +77,111 @@ section {
     filter 0.5s cubic-bezier(.17,.81,0,1.01);
 }
 
+/* HOME PAGE */
+h1 {
+    font-size: 400%;
+    margin: 20px;
+}
+h3 {
+    font-size: 200%;
+    color: var(--off-white-lighter);
+}
+body {
+    color: var(--white);
+    background-color: var(--off-black-darkest);
+}
+header {
+    position: relative;
+    top: 30%;
+    left: 10%;
+    line-height: 1.5;
+    opacity: 0;
+    -webkit-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
+    -moz-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
+    -o-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
+    animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
+}
+header h1 {
+    filter: none;
+    animation: glow 7s cubic-bezier(.17,.81,0,1.01) forwards 2s;
+}
+header h3 {
+
+    position: relative;
+    left: 25%;
+    opacity: 0%;
+    -webkit-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
+    -moz-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
+    -o-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
+    animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
+}
+section {
+    display: flex;
+    position: relative;
+    height: 120vh;
+}
+    /* PORTFOLIO SHORTCUT BUTTON */
+    .portfolio-shortcut {
+        color: rgb(119, 119, 119);
+        position: absolute;
+        transform: translate(40px, 100px);
+        background: var(--off-black-darkest);
+        border: 3px solid rgb(119, 119, 119);
+        border-radius: 40px;
+        width: 30px;
+        height: 30px;
+        text-align: right;
+        margin-bottom: auto;
+        line-height: 0.2;
+        font-weight: 700;
+        opacity: 0%;
+        padding: 25px 30px 30px 25px;
+        box-shadow: 0 0 1px rgb(177, 177, 177);
+        animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1.2s forwards;
+        -webkit-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        -moz-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        -o-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        transition: width 0.9s cubic-bezier(.36,.83,0,.99) 0.1s, 
+        padding .4s cubic-bezier(.36,.83,0,.99),
+        transform .4s cubic-bezier(.36,.83,0,.99),
+        border-color 0.5s, 
+        border-radius 0.3s,
+        color 1s;
+    }
+    .portfolio-shortcut:hover {
+        background-color: rgba(69, 185, 173, 0.071);
+        border: 3px solid rgb(229, 255, 251);
+        box-shadow: 0 0 6px rgba(121, 221, 204, 0.947), inset 0px 0px 10px 5px rgba(67, 216, 211, 0.455);
+        color: var(--white);
+        width: 280px;
+        padding: 31px 30px 35px 31px;
+        transform: translate(36px, 96px);
+        border-radius: 60px;
+        cursor: pointer;
+        transition: width 1.3s cubic-bezier(.36,.83,0,.99), 
+        padding .8s cubic-bezier(.36,.83,0,.99),
+        transform .8s cubic-bezier(.36,.83,0,.99),
+        border-color 0.5s, 
+        box-shadow 0.2s, 
+        border-radius 0.3s,
+        color 1s;
+    }
+    .portfolio-shortcut:hover::before {
+        content: "Show me the projects!";
+        font-size: 110%;
+        white-space: nowrap;
+        position: fixed;
+        text-align: right;
+        right: 50px;
+        opacity: 0;
+        filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+        -webkit-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
+        -moz-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
+        -o-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
+        animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
+    }
+
+/* ABOUT PAGE */
 .about {
     display: inline-block;
     margin: 20px;
@@ -212,88 +215,208 @@ section {
 .about-section2 {
     margin-left: 35px;
 }
+
+/* PORTFOLIO PAGE */
 .portfolio {
     display: inline-block;
     margin: 20px;
     line-height: 1.5;
 }
-.container {
-    display: flex;
-    flex-flow: row wrap;
-    width: 86vw;
-    height: 80vh;
+.portfolio h1 {
+    padding: 25px 30px 25px 130px;
 }
-.container div div img {
-    border-radius: 5px;
-    display: flex;
+    /* FLEXBOX CONTAINERS */
+    .portfolio .container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 86vw;
+        height: 80vh;
+    }
+    .container div div img {
+        border-radius: 55px;
+        display: flex;
+        position: relative;
+        margin:  20px auto;
+        width: 65%;
+        height: 70%;
+    }
+    .sub-container-1, .sub-container-2 {
+        display: flex;
+        margin: auto;
+        width: 50%;
+        height: inherit;
+        display: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        filter: drop-shadow(0px 0px 123px rgba(118, 210, 210, 0.156));
+    }
+    .sub-container-2 {
+        position: relative;
+        bottom: 40px;
+    }
+    /* FLEXBOXES */
+    .box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7 {
+        border: 1px solid rgb(182, 182, 182);
+        border-radius: 105px;
+        margin: 10px auto;
+        background-color: rgba(95, 132, 125, 0.644);
+    }
+    .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
+        border: 2px dotted rgb(255, 255, 255);
+        background-color: rgba(124, 160, 153, 0.644);
+        box-shadow: inset 0px 0px 60px rgba(79, 186, 200, 0.277);
+        filter: drop-shadow(0px 0px 10px rgba(77, 237, 210, 0.697));
+        cursor: pointer;
+    }
+    .box-1 {
+        width: 80%;
+        height: 50%;
+        font-size: 125%;
+        transition: width 0.6s cubic-bezier(.36,.83,0,.97),
+        height 0.6s cubic-bezier(.36,.83,0,.97),
+        font-size 0.6s cubic-bezier(.36,.83,0,.97),
+        transform 0.6s cubic-bezier(.36,.83,0,.97),
+        background-color 0.2s cubic-bezier(.36,.83,0,.97),
+        filter 0.2s cubic-bezier(.36,.83,0,.97);
+    }
+    .box-1:hover {
+        width: 87%;
+        height: 55%;
+        font-size: 140%;
+        transform: translateY(-5%);
+    }
+    .text-container-1, .text-container-2, .text-container-3 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        width: 65%;
+        filter: drop-shadow(0px 0px 10px black);
+    }
+    .text-container-3 {
+        font-size: 120%;
+    }
+    .box-2, .box-3, .box-4, .box-5, .box-6, .box-7 {
+        margin: auto;
+        font-size: 85%;
+        transition: width 0.4s cubic-bezier(.36,.83,0,.97),
+        height 0.4s cubic-bezier(.36,.83,0,.97),
+        font-size 0.4s cubic-bezier(.36,.83,0,.97),
+        background-color 0.2s cubic-bezier(.36,.83,0,.97),
+        filter 0.2s cubic-bezier(.36,.83,0,.97);
+    }
+    .box-2, .box-3 {
+        position: relative;
+        width: 30%;
+        height: 30%;
+        bottom: 50px;
+        padding: 20px;
+    }
+    .box-4, .box-5, .box-6, .box-7 {
+        width: 35%;
+        height: 35%;
+        padding: 30px;
+    }
+    .box-2:hover, .box-3:hover {
+        width: 35%;
+        height: 35%;
+        font-size: 100%;
+    }
+    .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
+        width: 42%;
+        height: 42%;
+        font-size: 100%;
+    }
+
+/* CONTACT PAGE */
+.contact {
     position: relative;
-    margin:  20px auto;
-    width: 65%;
-    height: 70%;
+    display: block;
+    right: 100px;
+    line-height: 2;
 }
-.sub-container-1, .sub-container-2 {
-    display: flex;
+.contact h1 {
+    position: relative;
+    width: 350px;
     margin: auto;
-    width: 50%;
-    height: inherit;
-    display: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
-.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7 {
-    border: 1px solid rgb(182, 182, 182);
-    border-radius: 25px;
-    margin: 10px auto;
-    background-color: rgba(131, 152, 148, 0.644);
-}
-.box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
-    border: 2px dotted rgb(255, 255, 255);
-    background-color: rgba(124, 160, 153, 0.644);
-    box-shadow: inset 0px 0px 60px rgba(79, 186, 200, 0.277);
-    filter: drop-shadow(0px 0px 10px rgba(79, 186, 200, 0.567));
-    cursor: pointer;
-}
-.box-1 {
-    width: 90%;
-    height: 55%;
-    font-size: 125%;
-    transition: width 0.4s cubic-bezier(.36,.83,0,.97),
-    height 0.4s cubic-bezier(.36,.83,0,.97),
-    font-size 0.4s cubic-bezier(.36,.83,0,.97),
-    background-color 0.2s cubic-bezier(.36,.83,0,.97),
-    filter 0.2s cubic-bezier(.36,.83,0,.97);
-}
-.box-1:hover {
-    width: 95%;
-    height: 60%;
-    font-size: 140%;
-}
-.text-container-1 {
-    position: relative;
+.contact .container {
+    width: 500px;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin: auto;
-    align-items: center;
-    width: 65%;
-    filter: drop-shadow(0px 0px 10px black);
+    text-align: center;
+    filter: drop-shadow(0px 0px 123px rgba(118, 210, 210, 0.39));
 }
-.box-2, .box-3, .box-4, .box-5, .box-6, .box-7 {
-    width: 35%;
-    height: 35%;
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: 600;
+}
+input {
+    text-align: center;
+    background-color: transparent;
+    color: var(--off-white-lightest);
+    border: none;
+    border-bottom: 1px solid var(--off-white-lightest);
+    padding: 7px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    transition: filter 0.8s cubic-bezier(.15,.82,0,.99);
+}
+input:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+    filter: drop-shadow(0px 0px 30px rgba(156, 226, 226, 0.658));
+}
+input::placeholder {
+    transition: color 0.8s 0.1s;
+}
+input:focus::placeholder {
+    color: transparent;
+    transition: color 0.1s;
+}
+label {
+    margin-top: 25px;
+}
+.name, .email {
+    width: 300px;
     margin: auto;
-    font-size: 85%;
-    transition: width 0.4s cubic-bezier(.36,.83,0,.97),
-    height 0.4s cubic-bezier(.36,.83,0,.97),
-    font-size 0.4s cubic-bezier(.36,.83,0,.97),
-    background-color 0.2s cubic-bezier(.36,.83,0,.97),
-    filter 0.2s cubic-bezier(.36,.83,0,.97);
 }
-.box-2:hover, .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
-    width: 42%;
-    height: 42%;
-    font-size: 100%;
-}
-
+    /* BUTTONS */
+    button {
+        color: rgb(119, 119, 119);
+        background: var(--off-black-darkest);
+        border: 3px solid rgb(119, 119, 119);
+        border-radius: 30px;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        margin: 20px auto;
+        font-weight: 700;
+        box-shadow: 0 0 1px rgb(177, 177, 177);
+        -webkit-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        -moz-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        -o-transition: width .8s cubic-bezier(.36,.26,0,1.02), filter 1s, border-color 0.5s, color 1s;
+        transition: border-color 0.5s, 
+            box-shadow 0.5s,
+            color 0.5s;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: rgba(69, 185, 173, 0.071);
+        border: 3px solid rgb(229, 255, 251);
+        box-shadow: 0 0 6px rgba(121, 221, 204, 0.947), inset 0px 0px 5px 2px rgba(67, 216, 211, 0.455);
+        color: var(--white);
+        transition: border-color 0.2s, 
+            box-shadow 0.2s, 
+            color 0.1s;
+    }
 @-webkit-keyframes fadeInFromNone {
     0% {
         display: none;
