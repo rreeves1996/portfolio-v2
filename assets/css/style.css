@@ -16,6 +16,7 @@
     bottom: 00px;
     width: 400px;
     height: 100vh;
+    z-index: 0;
 }
 .sidebar {
     background-color: rgba(173, 203, 197, 0.511);
@@ -32,6 +33,7 @@
     background-color 0.4s cubic-bezier(.34,.3,0,1.02) 0.1s,
     border-left 0.3s cubic-bezier(.34,.3,0,1.02),
     box-shadow 0.2s cubic-bezier(.34,.3,0,1.02);
+    z-index: 0;
 }
 .sidebar:hover {
     background-color: rgba(128, 234, 207, 0.488);
@@ -75,6 +77,12 @@
     right 0.6s cubic-bezier(.36,.83,0,.99),
     opacity 0.4s cubic-bezier(.17,.81,0,1.01),
     filter 0.5s cubic-bezier(.17,.81,0,1.01);
+}
+.sidebutton:active {
+    width: 100px;
+    right: 18px;
+    transition: width 0.03s,
+    right 0.03s;
 }
 
 /* HOME PAGE */
@@ -180,6 +188,10 @@ section {
         -o-animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
         animation: fadeIn 1.5s cubic-bezier(.34,.3,0,1.02) 0.3s forwards;
     }
+    .portfolio-shortcut:active {
+        filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.745));
+        transition: filter 0.2s;
+    }
 
 /* ABOUT PAGE */
 .about {
@@ -231,6 +243,7 @@ section {
         flex-flow: row wrap;
         width: 86vw;
         height: 80vh;
+        z-index: 3;
     }
     .container div div img {
         border-radius: 55px;
@@ -260,6 +273,7 @@ section {
         border-radius: 105px;
         margin: 10px auto;
         background-color: rgba(95, 132, 125, 0.644);
+        z-index: 3;
     }
     .box-1:hover, .box-2:hover, .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
         border: 2px dotted rgb(255, 255, 255);
@@ -277,13 +291,24 @@ section {
         font-size 0.6s cubic-bezier(.36,.83,0,.97),
         transform 0.6s cubic-bezier(.36,.83,0,.97),
         background-color 0.2s cubic-bezier(.36,.83,0,.97),
-        filter 0.2s cubic-bezier(.36,.83,0,.97);
+        filter 0.2s cubic-bezier(.36,.83,0,.97),
+        box-shadow 0.2s;
     }
     .box-1:hover {
         width: 87%;
         height: 55%;
         font-size: 140%;
         transform: translateY(-5%);
+    }
+    .box-1:active {
+        width: 85%;
+        height: 53%;
+        font-size: 135%;
+        transform: translateY(-2%);
+        transition: width 0.1s,
+        height 0.1s,
+        font-size 0.1s,
+        transform 0.1s;
     }
     .text-container-1, .text-container-2, .text-container-3 {
         position: relative;
@@ -294,8 +319,27 @@ section {
         width: 65%;
         filter: drop-shadow(0px 0px 10px black);
     }
+    .text-container-1 {
+        bottom: 10px;
+    }
+    .text-container-2 {
+        position: relative;
+        bottom: 10px;
+    }
     .text-container-3 {
         font-size: 120%;
+    }
+    .info {
+        opacity: 0%;
+        transition: opacity 0.2s cubic-bezier(.36,.83,0,.97),
+        transform 0.4s cubic-bezier(.36,.83,0,.97);
+    }
+    div div h2 {
+        transition: transform 0.4s cubic-bezier(.36,.83,0,.97);
+    }
+    div div img {
+        transition: transform 0.4s cubic-bezier(.36,.83,0,.97),
+        border-radius 0.4s cubic-bezier(.36,.83,0,.97);
     }
     .box-2, .box-3, .box-4, .box-5, .box-6, .box-7 {
         margin: auto;
@@ -328,7 +372,30 @@ section {
         height: 42%;
         font-size: 100%;
     }
-
+    .box-2:hover .info, .box-3:hover .info {
+        opacity: 100%;
+        transform: translateY(-15px);
+    }
+    .box-2:hover h2, .box-3:hover h2 {
+        transform: translateY(-15px);
+    }
+    .box-2:hover img, .box-3:hover img {
+        transform: translateY(-10px);
+    }
+    .box-4:hover .info, .box-5:hover .info, .box-6:hover .info, .box-7:hover .info {
+        opacity: 100%;
+        transform: translateY(-17px);
+    }
+    .box-4:hover h2, .box-5:hover h2, .box-6:hover h2, .box-7:hover h2 {
+        transform: translateY(-20px);
+    }
+    .box-4:hover img, .box-5:hover img, .box-6:hover img, .box-7:hover img {
+        transform: translateY(-15px);
+    }
+    #box:active {
+        box-shadow: inset 0px 0px 60px rgba(19, 23, 24, 0.662);
+        transition: box-shadow 0.1s;
+    }
 /* CONTACT PAGE */
 .contact {
     position: relative;
@@ -416,6 +483,10 @@ label {
         transition: border-color 0.2s, 
             box-shadow 0.2s, 
             color 0.1s;
+    }
+    button:active {
+        filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.745));
+        transition: filter 0.2s;
     }
 @-webkit-keyframes fadeInFromNone {
     0% {
