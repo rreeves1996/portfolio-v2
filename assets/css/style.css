@@ -2,7 +2,8 @@
     --white: #fff;
     --off-white-lightest: rgb(241, 240, 238);
     --off-white-lighter: rgb(182, 173, 192);
-    --off-black-darkest: rgb(35, 35, 59);
+    --purple-dark: rgb(35, 35, 59);
+    --blue-glow: rgba(118, 210, 210, 0.881);
 }
 ::selection {
     background: rgb(143, 91, 255);
@@ -96,7 +97,9 @@ h3 {
 }
 body {
     color: var(--white);
-    background-color: var(--off-black-darkest);
+    background-image: url(../bg.png);
+    background-color: var(--purple-dark);
+    background-blend-mode:color-dodge;
 }
 header {
     position: relative;
@@ -126,14 +129,14 @@ header h3 {
 section {
     display: flex;
     position: relative;
-    height: 120vh;
+    height: 100vh;
 }
     /* PORTFOLIO SHORTCUT BUTTON */
     .portfolio-shortcut {
         color: rgb(119, 119, 119);
         position: absolute;
         transform: translate(40px, 100px);
-        background: var(--off-black-darkest);
+        background-color: transparent;
         border: 3px solid rgb(119, 119, 119);
         border-radius: 40px;
         width: 30px;
@@ -206,7 +209,12 @@ section {
     position: relative;
     left: 150px;
     margin: 70px 20px 70px 20px;
-    filter: drop-shadow(0px 0px 123px rgba(118, 210, 210, 0.39));
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Copperplate', sans-serif;
+    letter-spacing: 20px;
+    font-size: 300%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.771));
 }
 .about p {
     filter: drop-shadow(0px 0px 5px black);
@@ -236,6 +244,12 @@ section {
 }
 .portfolio h1 {
     padding: 25px 30px 25px 130px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Copperplate', sans-serif;
+    letter-spacing: 20px;
+    font-size: 300%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.771));
 }
     /* FLEXBOX CONTAINERS */
     .portfolio .container {
@@ -357,20 +371,33 @@ section {
         bottom: 50px;
         padding: 20px;
     }
-    .box-4, .box-5, .box-6, .box-7 {
-        width: 35%;
-        height: 35%;
-        padding: 30px;
-    }
     .box-2:hover, .box-3:hover {
         width: 35%;
         height: 35%;
         font-size: 100%;
     }
+    .box-2:active, .box-3:active {
+        width: 33%;
+        height: 33%;
+        font-size: 95%;
+        transition: width 0.1s,
+        height 0.1s,
+        font-size 0.1s;
+    }
+    .box-4, .box-5, .box-6, .box-7 {
+        width: 35%;
+        height: 35%;
+        padding: 30px;
+    }
     .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover {
         width: 42%;
         height: 42%;
         font-size: 100%;
+    }
+    .box-4:active, .box-5:active, .box-6:active, .box-7:active {
+        width: 40%;
+        height: 40%;
+        font-size: 95%;
     }
     .box-2:hover .info, .box-3:hover .info {
         opacity: 100%;
@@ -405,10 +432,17 @@ section {
 }
 .contact h1 {
     position: relative;
-    width: 350px;
+    left: 50px;
+    width: 1000px;
     margin: auto;
     padding-top: 150px;
     padding-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Copperplate', sans-serif;
+    letter-spacing: 40px;
+    font-size: 500%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.771));
 }
 .contact .container {
     width: 500px;
@@ -458,7 +492,7 @@ label {
     /* BUTTONS */
     button {
         color: rgb(119, 119, 119);
-        background: var(--off-black-darkest);
+        background-color: transparent;
         border: 3px solid rgb(119, 119, 119);
         border-radius: 30px;
         width: 100px;
@@ -814,6 +848,6 @@ label {
     }
     
     100% {
-        filter: drop-shadow(0px 0px 123px rgba(118, 210, 210, 0.39));
+        filter: drop-shadow(0px 0px 123px var(--blue-glow));
     }
 }
