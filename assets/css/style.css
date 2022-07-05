@@ -110,8 +110,10 @@ body {
 }
 header {
     position: relative;
-    top: 30%;
+    top: 30vh;
     left: 10%;
+    height: 100vh;
+    width: 40vw;
     line-height: 1.5;
     opacity: 0;
     -webkit-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
@@ -140,11 +142,6 @@ header h3 {
     -moz-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
     -o-animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
     animation: fadeInFromNone 3s cubic-bezier(.34,.3,0,1.02) 1.8s forwards;
-}
-section {
-    display: flex;
-    position: relative;
-    height: 100vh;
 }
     /* PORTFOLIO SHORTCUT BUTTON */
     .portfolio-shortcut {
@@ -213,7 +210,8 @@ section {
 
 /* ABOUT PAGE */
 .about {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin: 20px;
     line-height: 2;
     width: 90vw;
@@ -244,10 +242,12 @@ section {
 .about section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 300px;
+    height: auto;
 }
 .about-section2 {
+    position: relative;
+    display: flex;
+    height: 20px;
     margin-left: 35px;
 }
 
@@ -442,7 +442,8 @@ section {
 .contact {
     position: relative;
     display: block;
-    right: 100px;
+    right: 2vw;
+    min-height: 100vh;
     line-height: 2;
 }
 .contact h1 {
@@ -865,5 +866,11 @@ label {
     
     100% {
         filter: drop-shadow(0px 0px 123px var(--blue-glow));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: inline-block;
     }
 }
