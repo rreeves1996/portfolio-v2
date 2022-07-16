@@ -8,6 +8,13 @@
 ::selection {
     background: rgb(143, 91, 255);
 }
+body {
+    color: var(--white);
+    background-image: url(../bg.png);
+    background-color: var(--purple-dark);
+    background-blend-mode:color-dodge;
+    overflow-x: hidden;
+}
 /* SIDEBAR */
 .sidebar {
     background-color: rgba(173, 203, 197, 0.511);
@@ -16,9 +23,9 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 5%;
+    width: 6rem;
     right: 0vw;
-    bottom: 0px;
+    bottom: 0vh;
     transition: filter 0.8s cubic-bezier(.34,.3,0,1.02) 0.1s,
     background-color 0.4s cubic-bezier(.34,.3,0,1.02) 0.1s,
     box-shadow 0.7s cubic-bezier(.34,.3,0,1.02);
@@ -47,7 +54,7 @@
     filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.462));
     opacity: 60%;
     width: 95px;
-    transform: translateX(-1px);
+    transform: translateX(0px);
     animation: expand 2s cubic-bezier(.36,.83,0,.97) 1.8s both;
     transition: width 0.3s,
     transform 0.3s,
@@ -66,7 +73,7 @@
 }
 .sidebutton:active {
     width: 100px;
-    transform: translateX(-3px);
+    transform: translateX(-1px);
     opacity: 100%;
     transition: width 0.03s,
     transform 0.03s;
@@ -81,18 +88,12 @@ h3 {
     font-size: 200%;
     color: var(--off-white-lighter);
 }
-body {
-    color: var(--white);
-    background-image: url(../bg.png);
-    background-color: var(--purple-dark);
-    background-blend-mode:color-dodge;
-}
 header {
     position: relative;
     top: 30vh;
     left: 10%;
-    height: 100vh;
-    width: 40vw;
+    min-height: 100vh;
+    width: 40%;
     line-height: 1.5;
     opacity: 0;
     -webkit-animation: fadeInFromNone 2.5s cubic-bezier(.34,.3,0,1.02) 1s forwards;
@@ -189,12 +190,13 @@ header h3 {
 
 /* ABOUT PAGE */
 .about {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 20px;
     line-height: 2;
-    width: 90vw;
-    height: 100vh;
+    width: 85%;
+    min-height: 100vh;
     font-size: 110%;
 }
 .about h1 {
@@ -215,13 +217,17 @@ header h3 {
     filter: drop-shadow(0px 0px 5px black);
 }
 .about-picture {
+    position: relative;
     margin: 60px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 5px;
     filter: drop-shadow(0px 0px 6px black);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .about section {
+    position: relative;
     display: flex;
     justify-content: center;
     height: auto;
@@ -235,11 +241,15 @@ header h3 {
 
 /* PORTFOLIO PAGE */
 .portfolio {
+    position: relative;
     display: inline-block;
-    margin: 20px;
+    width: 85%;
+    min-height: 100vh;
+    margin: 20px auto;
     line-height: 1.5;
 }
 .portfolio h1 {
+    position: relative;
     padding: 25px 30px 25px 130px;
     text-transform: uppercase;
     font-weight: 500;
@@ -423,18 +433,18 @@ header h3 {
 /* CONTACT PAGE */
 .contact {
     position: relative;
-    display: block;
-    right: 2vw;
+    display: flex;
+    flex-direction: column;
+    min-width: 85%;
     min-height: 100vh;
     line-height: 2;
+    padding: 100px;
 }
 .contact h1 {
     position: relative;
-    left: 50px;
-    width: 1000px;
-    margin: auto;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    display: flex;
+    width: auto;
+    margin: 30px auto;
     text-transform: uppercase;
     font-weight: 500;
     font-family: 'Copperplate', sans-serif;
@@ -443,11 +453,11 @@ header h3 {
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.771));
 }
 .contact .container {
-    width: 500px;
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: auto;
+    margin: 30px auto;
     text-align: center;
     filter: drop-shadow(0px 0px 123px rgba(118, 210, 210, 0.39));
 }
@@ -776,7 +786,6 @@ label {
     100% {
         display: block;
         opacity: 1;
-
     }
 }
 
@@ -854,12 +863,45 @@ label {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .about {
+        text-align: center;
+    }
+    .about h1 {
+        display: flex;
+        left: 0;
+        margin: 20px auto;
+        justify-content: center;
+        font-size: 500%;
+    }
+    .about-section1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-section2 .about-picture {
+        float: left;
+        margin: 5px;
+        padding: 0 20px 20px 0;
+        min-width: 50vw;
+        min-height: 50vw;
+    }
+    .about-section2 p {
+        text-align: justify;
+        min-width: 100%;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    section {
+        display: column;
+        margin: auto;
+    }
     .sidebar {
         background-color: rgba(225, 246, 248, 0.841);
         position: fixed;
         height: 80px;
-        width: 100vw;
+        width: 100%;
         top: 0;
         left: 0;
         z-index: 100;
@@ -870,13 +912,14 @@ label {
         box-shadow: none;
     }
     .sidebar-buttons {
+        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        /* align-items: center;
+        justify-content: center; */
         height: inherit;
         width: 100vw;
         opacity: 0%;
-        margin: auto;
+        margin: 0px auto;
         animation: scrollDown 2s cubic-bezier(.17,.81,0,1.01) 1.1s forwards;
     }
     .sidebutton {
