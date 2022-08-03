@@ -63,9 +63,9 @@ body {
 }
 .sidebutton:hover {
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.886));
-    width: 120px;
+    width: 121px;
     opacity: 90%;
-    transform: translateX(-12px);
+    transform: translateX(-13px);
     transition: width 0.1s,
     transform 0.1s,
     opacity 0.4s cubic-bezier(.36,.83,0,.97),
@@ -231,6 +231,7 @@ header h3 {
     display: flex;
     justify-content: center;
     height: auto;
+    line-height: 3;
 }
 .about-section2 {
     position: relative;
@@ -304,6 +305,7 @@ header h3 {
         cursor: pointer;
     }
     .box-1 {
+        min-width: 400px;
         width: 80%;
         height: 50%;
         font-size: 125%;
@@ -435,7 +437,7 @@ header h3 {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 85%;
+    width: 85%;
     min-height: 100vh;
     line-height: 2;
     padding: 100px;
@@ -863,39 +865,14 @@ label {
     }
 }
 
-@media screen and (max-width: 900px) {
-    .about {
-        text-align: center;
-    }
-    .about h1 {
-        display: flex;
-        left: 0;
-        margin: 20px auto;
-        justify-content: center;
-        font-size: 500%;
-    }
-    .about-section1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .about-section2 .about-picture {
-        float: left;
-        margin: 5px;
-        padding: 0 20px 20px 0;
-        min-width: 50vw;
-        min-height: 50vw;
-    }
-    .about-section2 p {
-        text-align: justify;
-        min-width: 100%;
+@media screen and (max-width: 1600px) {
+    .portfolio .container {
+        flex-flow: column;
     }
 }
-
-@media screen and (max-width: 768px) {
-    section {
-        display: column;
-        margin: auto;
+@media screen and (max-width: 900px) {
+    .about, .portfolio, .contact {
+        min-width: 100%;
     }
     .sidebar {
         background-color: rgba(225, 246, 248, 0.841);
@@ -914,8 +891,6 @@ label {
     .sidebar-buttons {
         display: flex;
         flex-direction: row;
-        /* align-items: center;
-        justify-content: center; */
         height: inherit;
         width: 100vw;
         opacity: 0%;
@@ -933,4 +908,44 @@ label {
         opacity 0.4s cubic-bezier(.36,.83,0,.97),
         filter 0.5s cubic-bezier(.36,.83,0,.97);
     }
+    .about {
+        text-align: center;
+    }
+    .about h1 {
+        display: flex;
+        left: 0;
+        margin: 20px auto;
+        justify-content: center;
+        font-size: 500%;
+    }
+    .about-section1, .about-section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        height: auto;
+    }
+    .about-section1 .about-picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px;
+        min-height: 400px;
+    }
+    .about-section2 .about-picture {
+        display: none;
+    }
+    .about-section2 p {
+        text-align: justify;
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    section {
+        display: column;
+        margin: auto;
+    }
+
 }
